@@ -75,6 +75,7 @@ function App() {
                 mssv: '',
                 className: ''
             });
+            setEditingId(null);
         } catch (error) {
             if (error.response) {
                 setTitle(error.response.data?.message || "Lỗi không xác định!");
@@ -130,7 +131,7 @@ function App() {
                         <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group as={Col} md="3" controlId="validationCustomUsername">
-                        <Form.Label>Username</Form.Label>
+                        <Form.Label>Email</Form.Label>
                         <InputGroup hasValidation>
                             <Form.Control
                                 type="email"
