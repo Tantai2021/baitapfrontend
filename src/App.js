@@ -13,7 +13,7 @@ function App() {
         mssv: '',
         className: ''
     });
-    const endpoint = 'http://localhost:5000/api/users/';
+    const endpoint = process.env.REACT_APP_API_URL;
     const fetchUsers = async () => {
         try {
             const response = await axios.get(endpoint);
